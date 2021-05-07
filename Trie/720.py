@@ -31,7 +31,7 @@ class Trie:
             return False
 
 class Solution:
-    def longestWord(self, words: List[str]) -> str:
+    def longestWord(self, words: list[str]) -> str:
         wordTrie = Trie()
         for word in words:
             wordTrie.insert(word)
