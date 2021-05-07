@@ -44,3 +44,7 @@ class Solution:
                     validwords = word
         
         return validwords
+
+sol = Solution()
+words = ["a","banana","app","appl","ap","apply","apple"]
+print(sol.longestWord(words))
