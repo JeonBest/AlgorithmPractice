@@ -1,0 +1,27 @@
+ hashset
+시간복잡도 O(N)
+공간복잡도 O(M) (M : nums[i])
+배열 생성 -> nums안의 값을 index로 해서 갯수 저장 -> 순회하며 max 찾음 -> 해당 index 반환
+
+ map
+시간복잡도 O(N)
+공간복잡도 O(N)
+
+ 변수저장
+시간복잡도 O(N)
+공간복잡도 O(1)
+변수ans에 nums[0] 저장 -> cnt값 1 -> 순회하며 nums[i]가 ans와 다르면 cnt-- / 같으면 cnt++ / cnt가 1이면 nums[i]를 ans에 저장
+
+https://docs.google.com/document/d/1t8noeglfdvt6_CXKtzhO49O-hMNGluzU-0Kf9swudV8/edit?usp=sharing
+
+
+int majorityElement(vector<int>& v) {
+        int x=v[0];
+        int c=0;
+        for(int i=0;i<v.size();i++){
+            if(v[i]==x) c++;
+            else if(c==1) x=v[i];
+            else c--;
+        }
+        return x;
+    }
