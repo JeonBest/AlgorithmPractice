@@ -1,6 +1,3 @@
-from os import close
-
-
 def solution(inputString):
     result = 0
     openBrackets = ['(', '{', '[', '<']
